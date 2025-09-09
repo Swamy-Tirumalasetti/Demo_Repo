@@ -1,0 +1,397 @@
+ Note : Executed in (Code 360 Naukari website) https://www.naukri.com/code360/problems/n-triangles_6573689?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems&leftPanelTabValue=SUBMISSION
+ 
+ 1) basic pattern(n*n)
+ for(int i=0;i<=n;i++){
+        for(int j=0;j<=n;j++){
+            System.out.print("*");
+        }
+        System.out.println();
+      }
+=========
+2) Right-Angled Triangle Pattern
+
+  for(int i=0;i<=n;i++){
+        for(int j=0;j<=i;j++){
+            System.out.print("*");
+        }
+        System.out.println();
+      }
+	  
+=========
+3) Right-anagled Number Pyramid  - ||
+
+for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            System.out.print(j+" ");
+        }
+        System.out.println(" ");
+      }
+    }
+=========
+Pattern - 4: Right-Angled Number Pyramid - II
+
+for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            System.out.print(i+ " "); 	
+        }
+        System.out.println(" ");
+      }
+    }
+=========
+
+Pattern-5: Inverted Right Pyramid
+
+ for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            System.out.print("* ");
+        }
+        System.out.println();
+      }
+=========
+
+Pattern - 6: Inverted Numbered Right Pyramid
+
+ for (int i = 1; i <= n; n--) {
+            for (int j = 1; j <= n; j++) {
+                System.out.print(j + " ");
+            }
+        
+            System.out.println();
+        }
+=========
+Pattern - 7: Star Pyramid
+
+for (int i = 0; i < n; i++) {
+			//space
+			for (int j = 0; j < n-i-1; j++) {
+				System.out.print(" ");
+			}
+			//star
+			for (int k = 0; k < 2*i+1; k++) {
+				System.out.print("*");
+			}
+			//space
+			for(int l =0; l < n-i-1; l++) {
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		
+=========
+Pattern - 8: Inverted Star Pyramid
+
+	for (int i = 0; i < n; i++)  {
+			//space
+			for (int j = 0; j < i; j++) {
+				System.out.print(" ");
+			}
+			//star
+			for (int k = 0; k < (2*n)-(2*i+1); k++) {
+				System.out.print("*");
+			}
+			//or
+			for (int k = 0; k <= 2*(n-i); k++) {
+				System.out.print("*");
+			}
+			
+			//space
+			for(int l = 0; l < i; l++) {
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+
+========
+Pattern - 9: Diamond Star Pattern
+
+	for (int i = 0; i < n; i++) {
+			//space
+			for (int j = 0; j < n-i-1; j++) {
+				System.out.print(" ");
+			}
+			//star
+			for (int k = 0; k < 2*i+1; k++) {
+				System.out.print("*");
+			}
+			//space
+			for(int l =0; l < n-i-1; l++) {
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+		for (int i = 0; i < n; i++)  {
+			//space
+			for (int j = 0; j < i; j++) {
+				System.out.print(" ");
+			}
+			//star
+			for (int k = 0; k < (2*n)-(2*i+1); k++) {
+				System.out.print("*");
+			}
+			//space
+			for(int l = 0; l < i; l++) {
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
+
+==========
+
+Pattern - 10: Half Diamond Star Pattern
+
+		for(int i = 1; i <= 2*n-1; i++) {
+			int stars = i;
+			if(stars>=n) stars = 2*n-i;
+			for(int j = 1; j <=stars; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+=========
+
+Pattern - 11: Binary Number Triangle Pattern
+
+ for(int i = 0; i < n; i++) {
+			int start = i;
+			if(start%2==0) start =1;
+			else
+				start = 0;
+			for(int j = 0; j <= i; j++) {
+				System.out.print(start+" ");
+				start = 1-start;
+			}
+			System.out.println();
+		
+	}
+=========
+Pattern - 12: Number Crown Pattern
+
+ for(int i = 1; i <= n; i++) {
+
+			for(int j = 1; j <= i; j++) {
+				System.out.print(j+" ");
+			}
+			for(int k = 1; k <= 2*(n-i); k++) {
+				System.out.print(" ");
+			}
+			for(int l = i; l > 0; l--) {
+				System.out.print(l+" ");
+			}
+			System.out.println(" ");
+		}
+=========
+Pattern - 13: Increasing Number Triangle Pattern
+
+	 int rows = 1;
+			for (int i = 1; i <= n; i++) {
+				for (int j = 1; j <= i; j++) {
+					System.out.print(rows + " ");
+					rows = rows + 1;
+				}
+				System.out.println();
+			}
+===========
+
+Pattern-14: Increasing Letter Triangle Pattern
+
+ for (int i = 0; i < n; i++) {
+            for (Character ch = 'A'; ch <= 'A'+i; ch++) {
+                System.out.print(ch+" ");
+            }
+            System.out.println();
+        }
+==========
+
+Pattern-15: Reverse Letter Triangle Pattern
+
+  for(int i =n; i>0 ; i--){
+            for(char j ='A'; j<'A'+i; j++){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+=========
+Pattern - 16: Alpha-Ramp Pattern
+
+ for (int i = 0; i < n; i++) {
+            char ch = 'A';
+            ch += i;
+            // ch = (char) 'A' + i;
+            for (char j = 'A'; j <= ch; j++) {
+                System.out.print(ch + " ");
+            }
+            System.out.println();
+        }
+=========
+Pattern - 17: Alpha-Hill Pattern
+
+for (int i = 0; i < n; i++) {
+			for (int j = 1; j < 2 * (n - i -1); j++) {
+				System.out.print(" ");
+			}
+			char c = 'A';
+			int breakPoint = ((2*i)+1)/2;
+			for (int k = 0; k <=2*i; k++) {
+				System.out.print(c + " ");
+				if(k<breakPoint) c++;
+				else c--;
+			}
+			for (int j = 1; j < 2 * (n - i -1); j++) {
+				System.out.print(" ");
+			}
+			System.out.println();
+		}
+		[OR]
+			
+			for (int i = 0; i < n; i++) {
+			char ch = 'A';
+			//ch +=i;
+			int breakPoint = 2*i-i;  //0,1,2,3....
+			for (int j  = 0; j <= 2*i; j++) {
+				System.out.print(ch);
+				if(j>=breakPoint)
+					ch--;
+				else
+					ch++;
+				}
+			System.out.println();
+		}
+=========
+Pattern-18: Alpha-Triangle Pattern
+
+       for(int i = 0;i<n;i++){
+           char j = 'A';
+           j +=n-1;
+           for(char ch = 'A'; ch<='A'+i; ch++){
+               System.out.print(j+" ");
+               j-=1;
+           }
+           System.out.println();
+       }
+	   
+	   [OR]
+	   
+	   	for (int i = n; i > 0; i--) {
+			char ch = 'A';
+			ch +=i-1;
+			for (char j  = ch; j < 'A'+n; j++) {
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+=========
+Pattern-19: Symmetric-Void Pattern
+
+for(int i = 0; i<n; i++) {
+			//stars
+			for(int j =i; j<n; j++) {
+				System.out.print("* ");
+			}
+			//space
+			for(int k =0; k<2*i; k++) {
+				System.out.print(" ");
+			}
+			//stars
+			for(int j =i; j<n; j++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+		for(int i = 0; i<n; i++) {
+			//stars
+			for(int j =0; j<=i; j++) {
+				System.out.print("* ");
+			}
+			//space
+			for(int k =0; k<2*(n-i-1); k++) {
+				System.out.print(" ");
+			}
+			//stars
+			for(int j =0; j<=i; j++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+******
+**  **
+*    *
+*    *
+**  **
+******
+=========
+Pattern - 20: Symmetric-Butterfly Pattern
+
+	for(int i = 1; i<2*n; i++) {
+			int stars = i;
+			if(stars>n) stars= 2*n-i;
+			//stars
+			for(int j =1; j<=stars; j++) {
+				System.out.print("* ");
+			}
+			//space
+			for(int k =1; k<=2*(n-stars); k++) {
+				System.out.print(" ");
+			}
+			//stars
+			for(int j =1; j<=stars; j++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+=========
+Pattern - 21: Hollow Rectangle Pattern
+ for(int i =0; i<n; i++){
+          for(int j =0;j<n;j++){
+              if(i==0 || j==0 || i==n-1 || j==n-1)
+              System.out.print("*");
+              else
+              System.out.print(" ");
+          }
+           System.out.println();
+      }
+=========
+Pattern - 22: The Number Pattern
+
+ for (int i = 0; i < 2 * n - 1; i++) {
+            for (int j = 0; j < 2 * n - 1; j++) {
+                int top = i;
+                int bottom = j;
+                int right = (2 * n - 2) * j;
+                int left = (2 * n - 2) * i;
+                System.out.print(n - Math.min(Math.min(top, bottom) - Math.min(left, right)));
+            }
+            System.out.println();
+        }
+		
+		(0r)
+		 
+ int n = 4; // Example value for n
+        for (int i = 0; i < 2 * n - 1; i++) {
+            for (int j = 0; j < 2 * n - 1; j++) {
+                int top = i;
+                int bottom = (2 * n - 2) - i;
+                int left = j;
+                int right = (2 * n - 2) - j;
+
+                // Find the minimum distance from the edges using conditional statements
+                int minDistance;
+                if (top < bottom) {
+                    minDistance = top;
+                } else {
+                    minDistance = bottom;
+                }
+
+                if (left < minDistance) {
+                    minDistance = left;
+                }
+
+                if (right < minDistance) {
+                    minDistance = right;
+                }
+
+                // Print the value based on the minimum distance
+                System.out.print(n - minDistance);
+            }
+            System.out.println(); // Move to the next line after each row
+        }

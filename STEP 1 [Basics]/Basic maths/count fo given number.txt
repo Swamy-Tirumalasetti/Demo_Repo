@@ -1,0 +1,110 @@
+1.Count of  given number
+public class ArrayList
+{
+	public static void countOfDigits(int n) {
+		int count = 0;
+		while(n>0){
+			//int reminder = n%10;
+			count++;
+			n = n/10;
+		}
+		System.out.println(count);
+	}
+	public static void main(String[] args) {
+		countOfDigits(9963);
+	}
+}
+========
+2,Find the number of digits of ‘n’ that evenly divide ‘n’.
+
+ int count = 0;
+        int m = n;
+        while (m > 0) {
+            int div = m % 10;
+            if (div!=0 && n % div == 0) {
+                count += 1;
+            }
+            m = m / 10;
+        }
+        return count;
+    }
+========
+3, Given an integer N return the reverse of the given number.
+ public static int reverse(int n) {
+        int reversedNumber = 0;
+        while (n > 0) {
+            int reminder = n % 10;
+            reversedNumber =  reversedNumber * 10 + reminder;
+            n = n / 10;
+
+        }
+        return reversedNumber;
+    }
+========
+4, Panlindrome or not 
+ int m = n;
+        int palindrome = 0;
+        while (m > 0) {
+            int rem = m % 10;
+            palindrome = (palindrome * 10) + rem;
+            m = m / 10;
+        }
+        if (palindrome == n)
+            return true;
+        else
+            return false;
+    }
+========
+5, Armstrong number 
+
+	int m = n;
+		int arm = 0;
+		while (m > 0) {
+			int rem = m % 10;
+			arm = rem * rem * rem + arm;
+			m = m / 10;
+		}
+		if (arm == n)
+			System.out.println("The given number is armStrong number " + arm);
+========
+6,Print all Divisors of a given Number (( one more is pemding in list ))
+
+	public static void countOfDigits(int n) {
+		int i =1;
+		while(i<=n) {
+			if (n % i == 0)
+
+				System.out.print(i+" ");
+			i++;
+		}
+	}
+========
+7, Check if a number is prime or not
+	if (n % 2 != 0 && n % n == 0)
+			System.out.println("TRUE");
+		else
+			System.out.println("FALSE");
+========
+8, Greatest common divisor 
+
+  int gcd1 = 0;
+        int gcd2 = 0;
+
+        for (int i = 1; i < n1; i++) {
+            if (n1 % i == 0)
+                gcd1 = i;
+
+        }
+        for (int j = 1; j < n2; j++) {
+            if (n2 % j == 0)
+                gcd2 = j;
+
+        }
+        return Math.min(gcd1, gcd2);
+        // shortway
+        // for (int i = 1; i <= Math.min(n1, n2); i++) {
+        // if (n1 % i == 0 && n2 % i == 0) {
+        // gcd = i;
+        // }
+        // }
+    }

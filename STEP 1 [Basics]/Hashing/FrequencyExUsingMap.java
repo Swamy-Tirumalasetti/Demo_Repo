@@ -1,0 +1,45 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class FrequencyExUsingMap {
+
+    public static void countFrequency(int[] array, int n) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < n; i++) {
+            if (map.containsKey(array[i])) {
+                map.put(array[i], map.get(array[i]) + 1);
+            } else {
+                map.put(array[i], 1);
+            }
+        }
+        // for traversing through map
+
+        int maxFreq = 0, minFreq = n;
+        int maxEle = 0, minEle = 0;
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+
+            int count = entry.getValue();
+            int element = entry.getKey();
+
+            if(count>maxFreq){
+                maxEle=element;
+                maxFreq=count;
+            }
+
+            if(count<minFreq){
+                minEle=element;
+                minFreq=count;
+            }
+            //System.out.println(entry.getKey() + "-" + entry.getValue());
+        }
+        System.out.println("The highest frequency element is: " + maxEle);
+        System.out.println("The lowest frequency element is: " + minEle);
+    }
+
+    public static void main(String[] args) {
+        int[] array = { 10, 5, 10, 15, 10, 5 };
+        int n = array.length;
+        countFrequency(array, n);
+    }
+}

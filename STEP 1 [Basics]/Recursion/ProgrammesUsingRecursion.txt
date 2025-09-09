@@ -1,0 +1,54 @@
+1, Sum of first N Natural Numbers
+
+	public static void sumOfNumbers(int n,int sum) {
+		if(n<1) {
+			System.out.println(sum);
+			return;
+		}
+		sumOfNumbers(n-1,sum+n);
+	}
+	public static void main(String[] args) {
+		sumOfNumbers(5,0);
+	}
+	 
+	 [OR]
+	
+	public static int sumOfNumbers(int n) {
+		if(n==0) {
+			return 0;
+		}
+		return (n + sumOfNumbers(n-1));
+	}
+	public static void main(String[] args) {
+		System.out.println(sumOfNumbers(6));
+	}
+	Now, let's see how the unwinding process works:
+
+The result of sumOfNumbers(0) is 0.
+The result of sumOfNumbers(1) is 1 + 0 = 1.
+The result of sumOfNumbers(2) is 2 + 1 = 3.
+The result of sumOfNumbers(3) is 3 + 3 = 6.
+The result of sumOfNumbers(4) is 4 + 6 = 10.
+The result of sumOfNumbers(5) is 5 + 10 = 15.
+
+Explanation of the Unwinding Process
+When sumOfNumbers(0) returns 0, this value is passed back to the previous call sumOfNumbers(1), which then calculates 1 + 0 = 1.
+This result (1) is then passed back to sumOfNumbers(2), which calculates 2 + 1 = 3.
+This result (3) is then passed back to sumOfNumbers(3), which calculates 3 + 3 = 6.
+This result (6) is then passed back to sumOfNumbers(4), which calculates 4 + 6 = 10.
+Finally, this result (10) is passed back to sumOfNumbers(5), which calculates 5 + 10 = 15.
+=========
+2, Factorial of a Number : Iterative and Recursive	
+
+ if (n == 0) {
+            return 1;
+        }
+        return (n * (factorial(n - 1)));
+		
+	[OR]
+	
+	int fac = 1;
+        // for (int i = 1; i <= n; i++) {
+        // fac = fac * i;
+        // }
+        // return fac;
